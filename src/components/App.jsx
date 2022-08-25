@@ -1,9 +1,13 @@
 import React from "react";
-import '../styles/global.scss'
+import { Layout } from "../containers/Layout";
+import { Login } from "../containers/Login";
+import '../styles/_global.scss'
 
 const App = () => {
     return (
-        <div>Page under construction...</div>
+        <Layout>
+            <Login />
+        </Layout>
     )
 }
 
