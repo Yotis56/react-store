@@ -1,13 +1,16 @@
 import React from "react";
 import { Link } from 'react-router-dom'
 import '../styles/header.scss'
+import iconMenu from '../assets/icons/icon_menu.svg'
+import yardSaleLogo from '../assets/logos/logo_yard_sale.svg'
+import shoppingCartIcon from '../assets/icons/icon_shopping_cart.svg'
 
 const Header = () => {
     return (
         <nav className="header">
-            <img src="" alt="Menu" className="menu" />
+            <img src={iconMenu} alt="Menu" className="menu" />
             <div className="navbar-left">
-                <img src="" alt="" className="logo" />
+                <img src={yardSaleLogo} alt="" className="header-logo" />
                 <ul>
                     <li>
                         <Link to="/">HOME</Link>
@@ -27,8 +30,8 @@ const Header = () => {
                 <ul>
                     <li className="navbar-email">mope@example.com</li>
                     <li className="navbar-shopping-cart">
-                        <img src="" alt="shopping cart" />
-                        <span className="shopping-cart__counter">2</span>
+                        <img src={shoppingCartIcon} alt="shopping cart" />
+                        <div className="shopping-cart__counter">2</div>
                     </li>
                 </ul>
             </div>

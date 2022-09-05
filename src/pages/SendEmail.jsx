@@ -1,15 +1,19 @@
 import React from 'react';
+//assets
+import yardSaleLogo from '../assets/logos/logo_yard_sale.svg'
+import emailLogo from '../assets/icons/email.svg'
+//styles
 import '../styles/sendEmail.scss';
 
 const SendEmail = () => {
 	return (
 		<div className="SendEmail">
 			<div className="form-container">
-				<img src="./logos/logo_yard_sale.svg" alt="logo" className="logo" />
+				<img src={yardSaleLogo} alt="logo" className="SendEmail-logo" />
 				<h1 className="title">Email has been sent!</h1>
 				<p className="subtitle">Please check your inbox for instructions on how to reset the password</p>
 				<div className="email-image">
-					<img src="./icons/email.svg" alt="email" />
+					<img src={emailLogo} alt="email" />
 				</div>
 				<button className="primary-button login-button">Login</button>
 				<p className="resend">

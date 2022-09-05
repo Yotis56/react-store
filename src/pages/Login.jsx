@@ -1,11 +1,14 @@
 import React from 'react';
+//assets
+import yardSaleLogo from '../assets/logos/logo_yard_sale.svg'
+//styles
 import '../styles/login.scss';
 
 const Login = () => {
 	return (
 		<div className="Login">
 			<div className="Login-container">
-				<img src="./logos/logo_yard_sale.svg" alt="logo" className="logo" />
+				<img src={yardSaleLogo} alt="logo" className="login-logo" />
 				<form action="/" className="form">
 					<label htmlFor="email" className="label">Email address</label>
 					<input type="text" id="email" placeholder="platzi@example.cm" className="input input-email" />
