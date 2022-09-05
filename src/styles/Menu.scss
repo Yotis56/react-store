@@ -3,7 +3,7 @@
 .Menu {
 	width: 100px;
 	height: auto;
-	border: 1px solid $--very-light-pink;
+	border: 1px solid $very-light-pink;
 	border-radius: 6px;
 	padding: 20px 20px 0 20px;
     & ul {
@@ -14,14 +14,14 @@
             text-align: end;
             &:last-child {
                 padding-top: 20px;
-                border-top: 1px solid $--very-light-pink;
+                border-top: 1px solid $very-light-pink;
                 & a {
-                    color: $--hospital-green;
-                    font-size: $--sm;
+                    color: $hospital-green;
+                    font-size: $sm;
                 }
             }
             & a {
-                color: $--back;
+                color: $black;
                 text-decoration: none;
                 margin-bottom: 20px;
                 display: inline-block;

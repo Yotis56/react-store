@@ -23,15 +23,15 @@
     }
     & div p:nth-child(1) {
         font-weight: bold;
-        font-size: $--md;
+        font-size: $md;
         margin-top: 0;
         margin-bottom: 4px;
     }
     & div p:nth-child(2) {
-        font-size: $--sm;
+        font-size: $sm;
         margin-top: 0;
         margin-bottom: 0;
-        color: $--very-light-pink;
+        color: $very-light-pink;
     }
 }
 @media (max-width: 640px) {
