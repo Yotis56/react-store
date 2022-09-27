@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Link } from 'react-router-dom'
 //styles
 import '../styles/header.scss'
 //components
 import Menu from './Menu'
+import { AppContext } from "../context/AppContext";
 //assets
 import iconMenu from '../assets/icons/icon_menu.svg'
 import yardSaleLogo from '../assets/logos/logo_yard_sale.svg'
@@ -17,6 +18,8 @@ const Header = () => {
     const hideMenu = () => {
         setToggle(false)
     }
+
+    const { state } = useContext(AppContext)
     return (
         <nav className="header">
             <img src={iconMenu} alt="Menu" className="menu" />
@@ -42,7 +45,11 @@ const Header = () => {
                     <li className="navbar-email" onClick={handleToggle}>mope@example.com</li>
                     <li className="navbar-shopping-cart">
                         <img src={shoppingCartIcon} alt="shopping cart" />
-                        <div className="shopping-cart__counter">2</div>
+                        {
+                            state.cart.length > 0 &&
+                            <div className="shopping-cart__counter">{state.cart.length}</div>
+
+                        }
                     </li>
                 </ul>
             </div>
