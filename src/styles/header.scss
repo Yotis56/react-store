@@ -4,6 +4,10 @@ nav {
 	display: flex;
 	justify-content: space-between;
 	padding: 0 24px;
+	position: fixed;
+	top: 0;
+	width: calc(100vw - 48px);
+	background-color: $white;
 	border-bottom: 1px solid $very-light-pink;
 }
 .menu {

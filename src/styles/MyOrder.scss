@@ -1,15 +1,29 @@
 @import './vars';
+.myOrder-background {
+	height: calc(100vh - 60px);
+	width: 100vw;
+	position: absolute;
+	top: 60px;
+	left: 0;
+	background-color: rgba($color: #121212, $alpha: 0.1);
+	z-index: -1;
+}
 
 .MyOrder {
 	width: 360px;
 	padding: 24px;
 	box-sizing: border-box;
 	position: absolute;
-	right: 0;
+	right: 5px;
+	top: 0px;
+	bottom: 0;
+	background-color: #f8f3ec;
+	border: 1px solid #221f2e;
+	border-radius: 6px;
 }
 
 .title {
-	font-size: $--lg;
+	font-size: $lg;
 	font-weight: bold;
     &-container {
         display: flex;
@@ -24,7 +38,7 @@
 	grid-template-columns: auto 1fr;
 	gap: 16px;
 	align-items: center;
-	background-color: $--text-input-field;
+	background-color: $text-input-field;
 	margin-bottom: 24px;
 	border-radius: 8px;
 	padding: 0 24px;
@@ -33,7 +47,7 @@
         flex-direction: column;
     }
     & p span:nth-child(1) {
-        font-size: $--md;
+        font-size: $md;
         font-weight: bold;
     }
     & p:nth-child(2) {
@@ -42,13 +56,13 @@
     }    
 }
 .primary-button {
-	background-color: $--hospital-green;
+	background-color: $hospital-green;
 	border-radius: 8px;
 	border: none;
-	color: $--white;
+	color: $white;
 	width: 100%;
 	cursor: pointer;
-	font-size: $--md;
+	font-size: $md;
 	font-weight: bold;
 	height: 50px;
 }

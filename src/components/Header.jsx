@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import '../styles/header.scss'
 //components
 import Menu from './Menu'
+import { MyOrder } from "../containers/MyOrder";
 import { AppContext } from "../context/AppContext";
 //assets
 import iconMenu from '../assets/icons/icon_menu.svg'
@@ -12,6 +13,7 @@ import shoppingCartIcon from '../assets/icons/icon_shopping_cart.svg'
 
 const Header = () => {
     const [toggle, setToggle] = useState(false)
+    const [toggleOrders, setToggleOrders] = useState(false)
     const handleToggle = () => {
         setToggle(!toggle)
     }
@@ -43,7 +45,10 @@ const Header = () => {
             <div className="navbar-right">
                 <ul>
                     <li className="navbar-email" onClick={handleToggle}>mope@example.com</li>
-                    <li className="navbar-shopping-cart">
+                    <li 
+                        className="navbar-shopping-cart" 
+                        onClick={ () => setToggleOrders(!toggleOrders)}
+                    >
                         <img src={shoppingCartIcon} alt="shopping cart" />
                         {
                             state.cart.length > 0 &&
@@ -54,6 +59,7 @@ const Header = () => {
                 </ul>
             </div>
             { toggle && <Menu hideMenu={hideMenu}/> }
+            { toggleOrders && <MyOrder setToggle={setToggleOrders} />}
         </nav>
     )
 }
