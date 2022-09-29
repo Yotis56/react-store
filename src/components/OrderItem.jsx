@@ -3,10 +3,10 @@ import { AppContext } from '../context/AppContext';
 import closeIcon from '../assets/icons/icon_close.png'
 import '../styles/OrderItem.scss';
 
-const OrderItem = ({ product }) => {
+const OrderItem = ({ product, indexValue }) => {
 	const { removeFromCart } = useContext(AppContext)
 	const handleRemove = () => {
-		removeFromCart(product)
+		removeFromCart(indexValue)
 	}
 	return (
 		<div className="OrderItem">
