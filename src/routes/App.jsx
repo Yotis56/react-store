@@ -20,7 +20,7 @@ const App = () => {
 
     return (
         <AppContext.Provider value={initialState}>
-            <BrowserRouter>
+            <BrowserRouter basename="/react-store">
                 <Routes>
                     <Route path="/" element={<Layout />}>
                         <Route index element={<Home />}/>   
