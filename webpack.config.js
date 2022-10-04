@@ -8,7 +8,7 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'react-store/bundle.js',
-        publicPath: '/react-store/',
+        // publicPath: '/react-store/',
         clean: true,
     },
     resolve: {

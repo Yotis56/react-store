@@ -15,12 +15,13 @@ import { AppContext } from "../context/AppContext";
 import { useInitialState } from "../hooks/useInitialState";
 import '../styles/_global.scss'
 
+// basename="/react-store"
 const App = () => {
     const initialState = useInitialState()
 
     return (
         <AppContext.Provider value={initialState}>
-            <BrowserRouter basename="/react-store">
+            <BrowserRouter >
                 <Routes>
                     <Route path="/" element={<Layout />}>
                         <Route index element={<Home />}/>   
