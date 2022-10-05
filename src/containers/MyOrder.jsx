@@ -30,16 +30,16 @@ const MyOrder = ({ setToggle }) => {
 							<OrderItem indexValue={index}  product={product} key={`orderItem-${product.id}-${index}`}/>
 						) )
 					}
-					<div className="order">
-						<p>
-							<span>Total</span>
-						</p>
-						<p>${sumTotal()}</p>
-					</div>
-					<button className="primary-button">
-						Checkout
-					</button>
 				</div>
+				<div className="order">
+					<p>
+						<span>Total</span>
+					</p>
+					<p>${sumTotal()}</p>
+				</div>
+				<button className="primary-button">
+					Checkout
+				</button>
 			</aside>
 		</>
 	);
