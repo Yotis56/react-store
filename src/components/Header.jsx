@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { Link } from 'react-router-dom'
 //styles
 import '../styles/header.scss'
@@ -10,21 +10,35 @@ import { AppContext } from "../context/AppContext";
 import iconMenu from '../assets/icons/icon_menu.svg'
 import yardSaleLogo from '../assets/logos/logo_yard_sale.svg'
 import shoppingCartIcon from '../assets/icons/icon_shopping_cart.svg'
+import { MobileMenu } from "./MobileMenu";
 
 const Header = () => {
     const [toggle, setToggle] = useState(false)
     const [toggleOrders, setToggleOrders] = useState(false)
-    const handleToggle = () => {
-        setToggle(!toggle)
-    }
+    const [screenWidth, setScreenWidth] = useState(undefined)
+    const [toggleMenu, setToggleMenu] = useState(false)
     const hideMenu = () => {
         setToggle(false)
     }
-
+    const handleToggle = () => {
+        setToggle(!toggle)
+    }
+    const handleMenu = () => {
+        setToggleMenu(!toggleMenu)
+    }
+    const getWindowWidth = () => {
+        const { innerWidth: width} = window;
+        setScreenWidth(width)
+    }
+    useEffect( () => {
+        getWindowWidth()
+    }, [])
+    window.addEventListener('resize', getWindowWidth)
     const { state } = useContext(AppContext)
+    
     return (
         <nav className="header">
-            <img src={iconMenu} alt="Menu" className="menu" />
+            <img src={iconMenu} alt="Menu" className="menu" onClick={handleMenu}/>
             <div className="navbar-left">
                 <img src={yardSaleLogo} alt="" className="header-logo" />
                 <ul>
@@ -60,6 +74,7 @@ const Header = () => {
             </div>
             { toggle && <Menu hideMenu={hideMenu}/> }
             { toggleOrders && <MyOrder setToggle={setToggleOrders} />}
+            { (screenWidth < 640 && toggleMenu) && <MobileMenu /> }
         </nav>
     )
 }

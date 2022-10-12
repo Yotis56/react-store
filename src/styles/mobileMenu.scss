@@ -1,0 +1,20 @@
+@import './vars';
+
+.mobileMenu {
+    &-container {
+        position: absolute;
+        top: 61px;
+        left: 0;
+        width: calc(100vw - 30px);
+        height: calc(100vh - 61px);
+        background-color: $white;
+        transition: all ease 0.5s;
+        & ul {
+            list-style: none;
+        }
+        & ul li a {
+            text-decoration: none;
+            color: $very-light-pink;
+        }
+    }
+}
