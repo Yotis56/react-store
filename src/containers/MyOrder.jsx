@@ -31,15 +31,17 @@ const MyOrder = ({ setToggle }) => {
 						) )
 					}
 				</div>
-				<div className="order">
-					<p>
-						<span>Total</span>
-					</p>
-					<p>${sumTotal()}</p>
+				<div className="orderSummary-container">
+					<div className="order">
+						<p>
+							<span>Total</span>
+						</p>
+						<p>${sumTotal()}</p>
+					</div>
+					<button className="primary-button">
+						Checkout
+					</button>
 				</div>
-				<button className="primary-button">
-					Checkout
-				</button>
 			</aside>
 		</>
 	);
