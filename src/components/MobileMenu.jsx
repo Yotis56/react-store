@@ -8,7 +8,7 @@ const MobileMenu = () => {
             <h3 className="mobileMenu__title">Categories</h3>
             <ul className="mobileMenu__up">
                 <li>
-                    <Link to="/">HOME</Link>
+                    <Link to="/">Home</Link>
                 </li>
                 <li>
                     <Link to="">Clothes</Link>
@@ -29,7 +29,7 @@ const MobileMenu = () => {
                 </li>
             </ul>
             <div className="mobileMenu__mail">
-                <span>mope@example.com</span>
+                <span>mope@example.com</span> <br />
                 <Link to="/">Sign out</Link>
             </div>
         </div>
